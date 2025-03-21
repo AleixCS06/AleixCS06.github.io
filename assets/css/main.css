@@ -1457,3 +1457,51 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Fa que les vores siguin més suaus */
+}
+
+.portfolio-item img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.15); /* Fa la imatge més gran */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Afegeix una ombra subtil */
+}
+
+.hero {
+  height: 80vh; /* Redueix l'altura al 80% de la pantalla */
+  min-height: 500px; /* Assegura que no sigui massa petit en pantalles petites */
+  display: flex;
+  align-items: center; /* Manté el text centrat */
+}
+
+
+#about {
+  margin-top: -50px; /* Puja la secció perquè es vegi abans */
+  padding-top: 100px; /* Manté un bon espai entre títols */
+}
+
+h2 {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1.2s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
